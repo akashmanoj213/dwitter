@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form [formGroup]="commentForm" (ngSubmit)="onSubmit()" class="form-group comment-field">
+          <div class="input-group">
+            <textarea
+              class="form-control"
+              formControlName="content"
+              rows="1"
+              placeholder="Add comment..."
+            ></textarea>
+            <button [disabled]="commentForm.invalid" class="input-group-btn btn btn-success go inline">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+            <div class="container comment" *ngFor="let comment of comments">
+                <div class="row">
+                    <div class="col-2">
+                        <img class="img-responsive" src="../../../../assets/user-thumbnail.png" alt="User image">
+                    </div>
+                    <div class="col-10 d-flex flex-column">
+                        <p class="comment-content">{{ comment.content }}</p>
+                        <span>@{{ comment.username }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <img class="user-image" src="../../../../assets/user-thumbnail.png" alt="User image">
+                    </div>
+                    <div class="col-11 d-flex flex-column">
+                        <p>lorem ipsum asd ihadfigh djfgn knbkb b jhbgifu hnjnvc knkdjfgn poih kjrngkfdjng hf njfgn poufnb ksndfgojfpodign sdofgn sdfj kjfdbg pisjdfg</p>
+                        <span>@username</span>
+                    </div>
+                </div>
+            </div> -->
+      </div>
+    </div>
+</div>

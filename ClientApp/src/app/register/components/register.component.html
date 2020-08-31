@@ -1,0 +1,45 @@
+<div class="col-md-6 offset-md-3 mt-5">
+    <div class="card">
+        <h4 class="card-header">Register</h4>
+        <div class="card-body">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" formControlName="firstName" class="form-control" [class.is-invalid]="registerFormControls.firstName.touched && registerFormControls.firstName.errors" />
+                    <div *ngIf="registerFormControls.firstName.touched && registerFormControls.firstName.errors" class="text-danger">
+                        <div *ngIf="registerFormControls.firstName.errors.required">First Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" formControlName="lastName" class="form-control" [class.is-invalid]="registerFormControls.lastNametouched && registerFormControls.lastName.errors" />
+                    <div *ngIf="registerFormControls.lastName.touched && registerFormControls.lastName.errors" class="text-danger">
+                        <div *ngIf="registerFormControls.lastName.errors.required">Last Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" formControlName="username" class="form-control" [class.is-invalid]="registerFormControls.usernametouched && registerFormControls.usernameerrors" />
+                    <div *ngIf="registerFormControls.username.touched && registerFormControls.username.errors" class="text-danger">
+                        <div *ngIf="registerFormControls.username.errors.required">Username is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" formControlName="password" class="form-control" [class.is-invalid]="registerFormControls.password.touched && registerFormControls.password.errors" />
+                    <div *ngIf="registerFormControls.password.touched && registerFormControls.password.errors" class="text-danger">
+                        <div *ngIf="registerFormControls.password.errors.required">Password is required</div>
+                        <div *ngIf="registerFormControls.password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" [disabled]="loading || registerForm.invalid" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        Register
+                    </button>
+                    <a routerLink="../login" class="btn btn-link">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

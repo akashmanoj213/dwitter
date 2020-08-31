@@ -1,0 +1,31 @@
+.new-message {
+    border: solid 1px #6c757d;
+    padding: 5px;
+    background-color: #c9e9f6;
+    margin-bottom: 5%;
+}
+
+.post {
+    border: solid 1px #e86af0;
+    border-radius: 15px;
+    padding: 2%;
+    background-color: #97CAEF;
+    margin-bottom: 2%;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 4px 2px;
+}
+
+.post-content {
+    font-family: 'Pacifico', cursive;
+    font-size: larger;
+}
+
+.img-responsive {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.post-footer {
+    padding-left: 2%;
+    padding-right: 2%;
+}

@@ -1,0 +1,43 @@
+.new-post {
+    border: solid 1px #6c757d;
+    /* padding: 5px; */
+}
+
+.user-image {
+    height: 50px;
+    width: 50px;
+}
+
+.comment-field {
+    margin-top: 1%;
+}
+
+.comment-field .input-group-btn {
+    margin-left: 1%;
+}
+
+.comment-field .form-control {
+    border-radius: 8px;
+}
+
+.comment {
+    background-color: #CAFAFE;
+    margin: 1%;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.comment-content {
+    font-family: 'Pacifico', cursive;
+    font-size: large;
+}
+
+.img-responsive {
+    width: 100%;
+    border-radius: 50px;
+    padding: 1%;
+}
+
+.btn-add {
+    background-color: #F7B733;
+}
