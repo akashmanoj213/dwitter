@@ -25,3 +25,6 @@ The backend code is contained in all the other directories apart from ClientApp.
 * Front end functionalities for editing, deleting posts and comments (Currently only POST methods are implemented).
 * The Alert component that should show all unexpected errors that can occur in the app. Might get replaced with Toast messages soon.
 * UI layout.
+
+# Steps to run
+Make sure you have .NET core SDK installed. Then just 'cd' into the project and run 'dotnet run'. In case of any issue on front end packages, try doing an npm install (Need node and npm) seperately in the ClientsApp folder and then proceed.
